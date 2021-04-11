@@ -12,7 +12,31 @@ var numeric = ["0","1","2","3","4","5","6","7","8","9"]
 // Assignment Code - Given Code
 var generateBtn = document.querySelector("#generate");
 
-//function for selected
+//function for user to select screen prompts - Me
+function passwordGenerate() {
+var person = window.prompt("Enter lenght of password, 8, or 128:");
+}
+
+//Function to choose capital letters
+function capitalCharacters() {
+var characterChoice = window.prompt("Choose characters, capital letters");
+}
+
+//Function to choose lowercase letters
+function lowercaseCharacters() {
+  var characterChoice = window.prompt("Choose characters, lowercase");
+  }
+
+//Function to choose numbers
+function numbers() {
+  var characterChoice = window.prompt("Choose, numbers");
+  }
+
+ //Function to choose special characters
+function specialCharacters() {
+  var characterChoice = window.prompt("Choose, special characters");
+  } 
+
 
 //Noah example - Teacher Ex.
 function generatePassword (){
