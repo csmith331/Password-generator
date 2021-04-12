@@ -13,8 +13,8 @@ var numeric = ["0","1","2","3","4","5","6","7","8","9"]
 var generateBtn = document.querySelector("#generate");
 
 //function for user to select screen prompts - Me
-function passwordGenerate() {
-var person = window.prompt("Enter lenght of password, 8, or 128:");
+function generate() {
+var characterChoice = window.prompt("Enter length of password, 8, or 128:");
 }
 
 //Function to choose capital letters
