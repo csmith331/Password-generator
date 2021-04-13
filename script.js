@@ -94,23 +94,38 @@ console.log(characterAmount, charactersUpper, charactersLower, symbols, numeric)
 
 
 //Noah example - Teacher Ex.
-function writePassword(){
-  return 'yourpassword';
-}
+// function writePassword(){
+//   return 'yourpassword';
+// }
 
 // Write password to the #password input - Given Code
+// function writePassword() {
+//   console.log('writing password'); 
+//   var password = writePassword();
+//   var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
+
+// }
+
 function writePassword() {
   console.log('writing password'); 
-  var password = writePassword();
+  var password = generate(characterAmount, charactersLower, symbols, numeric);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
 
-function characterChoices() {
 
-}
+function generate(){
+  return 'My fancy new password'
+ }
+
+
+// function characterChoices() {
+
+// }
 
 
 
