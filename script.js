@@ -23,7 +23,7 @@ var charactersUpper_codes = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "
 var numeric_codes = ["0","1","2","3","4","5","6","7","8","9"]
 
 
-const password = generate(characterAmount, charactersLower, symbols, charactersUpper, numeric) = password
+// const password = generate(characterAmount, charactersLower, symbols, charactersUpper, numeric) = password
 
 
 // Assignment Code - Given Code
@@ -31,20 +31,41 @@ var generateBtn = document.querySelector("#generate");
 
 
 //Source WebDevSimplified on Github
-function generate(characterAmount, symbols, charactersUpper, numeric) {
-let codes = charactersLower
-if (special) codes = special
-if (symbols) codes = symbols
-if (charactersUpper) codes = charactersUpper
-}
+// function generate(characterAmount, symbols, charactersUpper, numeric) {
+// let codes = charactersLower
+// if (special) codes = special
+// if (symbols) codes = symbols
+// if (charactersUpper) codes = charactersUpper
+// }
 
-const password = []
-for (let i = 0; i < characterAmount; i++) {
-  const characterCode = codes[Math.floor(Math.random() * codes.length)]
-  password.push(String.fromcodes(codes))
-}
-return password.join('')
-}
+// const password = []
+// for (let i = 0; i < characterAmount; i++) {
+//   const characterCode = codes[Math.floor(Math.random() * codes.length)]
+//   password.push(String.fromcodes(codes))
+// }
+// return password.join('')
+// }
+
+// What BCS Told me to put
+// function generate() {
+var characterAmount = window.prompt("What length would you like for the password");
+var charactersUpper = confirm("Do you want to use uppercase letters?");
+var charactersLower = confirm("Do you want to use lowercase letters?");
+var symbols = confirm("Do you want to use special characters?");
+var numeric = confirm("do you want to use numbers?");
+// }
+console.log(characterAmount, charactersUpper, charactersLower, symbols, numeric)
+
+
+// const password = []
+// for (let i = 0; i < characterAmount; i++) {
+//   const characterCode = codes[Math.floor(Math.random() * codes.length)]
+//   password.push(String.fromcodes(codes))
+// }
+// return password.join('');
+
+
+
 
 //function for user to select screen prompts - Me
 // function generate() {
@@ -72,15 +93,15 @@ return password.join('')
 //   } 
 
 
-// //Noah example - Teacher Ex.
-// function generatePassword (){
-//   return 'yourpassword';
-// }
+//Noah example - Teacher Ex.
+function writePassword(){
+  return 'yourpassword';
+}
 
 // Write password to the #password input - Given Code
 function writePassword() {
-  console.log('writing password'); //Noah example
-  var password = generate();
+  console.log('writing password'); 
+  var password = writePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -91,10 +112,7 @@ function characterChoices() {
 
 }
 
-//Noah example - Teacher Ex.
-function generatePassword (){
-  return 'yourpassword';
-}
+
 
 // Add event listener to generate button - Given Code
 generateBtn.addEventListener("click", writePassword);
