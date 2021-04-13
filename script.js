@@ -1,4 +1,4 @@
-var length = ["0","1","2", "3","4", "5", "6", "7", "8",
+var characterAmount_codes = ["0","1","2", "3","4", "5", "6", "7", "8",
 "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27",
 "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48",
 "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", 
@@ -8,31 +8,48 @@ var length = ["0","1","2", "3","4", "5", "6", "7", "8",
 
 
 
-var characters = ["a", "b","c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",
+var charactersLower_codes = ["a", "b","c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",
 "p", "q","r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 
-var special = ["U+0021", "U+0023", "U+0024", "U+0025", "U+0026", "U+002D", "U+002F", "U+003C", 
+var symbols_codes = ["U+0021", "U+0023", "U+0024", "U+0025", "U+0026", "U+002D", "U+002F", "U+003C", 
 "U+003D", "U+003E", "U+003F", "U+0040", "U+005B", "U+005D", "U+005C", "U+007B", "U+007D"]
 
 
-var charactersUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N",
+var charactersUpper_codes = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N",
 "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 
-var numeric = ["0","1","2","3","4","5","6","7","8","9"]
+var numeric_codes = ["0","1","2","3","4","5","6","7","8","9"]
 
 
-const password = generate(characters, special, charactersUpper, numeric) = password
+const password = generate(characterAmount, charactersLower, symbols, charactersUpper, numeric) = password
 
 
 // Assignment Code - Given Code
 var generateBtn = document.querySelector("#generate");
 
-//function for user to select screen prompts - Me
-function generate() {
-var characterChoice = window.prompt("Enter length of password 8 or 128:");
+
+//Source WebDevSimplified on Github
+function generate(characterAmount, symbols, charactersUpper, numeric) {
+let codes = charactersLower
+if (special) codes = special
+if (symbols) codes = symbols
+if (charactersUpper) codes = charactersUpper
 }
+
+const password = []
+for (let i = 0; i < characterAmount; i++) {
+  const characterCode = codes[Math.floor(Math.random() * codes.length)]
+  password.push(String.fromcodes(codes))
+}
+return password.join('')
+}
+
+//function for user to select screen prompts - Me
+// function generate() {
+// var characterChoice = window.prompt("Enter length of password 8 or 128:");
+// }
 
 // //Function to choose capital letters
 // function generate() {
