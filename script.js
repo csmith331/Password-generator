@@ -23,109 +23,88 @@ var charactersUpper_codes = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "
 var numeric_codes = ["0","1","2","3","4","5","6","7","8","9"]
 
 
-// const password = generate(characterAmount, charactersLower, symbols, charactersUpper, numeric) = password
+
 
 
 // Assignment Code - Given Code
 var generateBtn = document.querySelector("#generate");
 
 
-//Source WebDevSimplified on Github
-// function generate(characterAmount, symbols, charactersUpper, numeric) {
-// let codes = charactersLower
-// if (special) codes = special
-// if (symbols) codes = symbols
-// if (charactersUpper) codes = charactersUpper
-// }
-
-// const password = []
-// for (let i = 0; i < characterAmount; i++) {
-//   const characterCode = codes[Math.floor(Math.random() * codes.length)]
-//   password.push(String.fromcodes(codes))
-// }
-// return password.join('')
-// }
-
-// What BCS Told me to put
-// function generate() {
-var characterAmount = window.prompt("What length would you like for the password");
-var charactersUpper = confirm("Do you want to use uppercase letters?");
-var charactersLower = confirm("Do you want to use lowercase letters?");
-var symbols = confirm("Do you want to use special characters?");
-var numeric = confirm("do you want to use numbers?");
-// }
-console.log(characterAmount, charactersUpper, charactersLower, symbols, numeric)
-
-
-// const password = []
-// for (let i = 0; i < characterAmount; i++) {
-//   const characterCode = codes[Math.floor(Math.random() * codes.length)]
-//   password.push(String.fromcodes(codes))
-// }
-// return password.join('');
 
 
 
 
-//function for user to select screen prompts - Me
-// function generate() {
-// var characterChoice = window.prompt("Enter length of password 8 or 128:");
-// }
-
-// //Function to choose capital letters
-// function generate() {
-// var charactersUpper = window.prompt("Choose characters capital letters");
-// }
-
-//Function to choose lowercase letters
-// function generate() {
-//   var characters = window.prompt("Choose characters lowercase");
-//   }
-
-//Function to choose numbers
-// function generate() {
-//   var numeric = window.prompt("Choose numbers");
-//   }
-
- //Function to choose special characters
-// function generate() {
-//   var special = window.prompt("Choose special characters");
-//   } 
 
 
-//Noah example - Teacher Ex.
-// function writePassword(){
-//   return 'yourpassword';
-// }
 
-// Write password to the #password input - Given Code
-// function writePassword() {
-//   console.log('writing password'); 
-//   var password = writePassword();
-//   var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
 
-// }
+
+
+
+
+
+
+
 
 function writePassword() {
   console.log('writing password'); 
-  var password = generate(characterAmount, charactersLower, symbols, numeric);
+  // var password = generate(characterAmount, charactersLower, symbols, numeric);
+  
+
+  var characterAmount = window.prompt("What length would you like for the password");
+  var charactersUpper = confirm("Do you want to use uppercase letters?");
+  var charactersLower = confirm("Do you want to use lowercase letters?");
+  var symbols = confirm("Do you want to use special characters?");
+  var numeric = confirm("Do you want to use numbers?");
+  var password =[];
+  var currentlenghtofpassword = 0;
+  var totalpassword_codes = [];
+// }
+  console.log(characterAmount, charactersUpper, charactersLower, symbols, numeric)
+
+  if (charactersUpper) {
+    var index = Math.floor(Math.random() * charactersUpper_codes.length);
+    const characterCode = charactersUpper_codes[index]
+    console.log("password1",password)
+    password.push(characterCode)
+    console.log("password2",password)
+    currentlenghtofpassword += 1;
+    totalpassword_codes = totalpassword_codes.concat(charactersUpper_codes)
+  }
+  if (charactersLower) {
+    var index = Math.floor(Math.random() * charactersLower_codes.length);
+    const characterCode = charactersLower_codes[index]
+    password.push(characterCode)
+    currentlenghtofpassword += 1;
+    totalpassword_codes = totalpassword_codes.concat(charactersLower_codes)
+  }
+  if (symbols) {
+    var index = Math.floor(Math.random() * symbols_codes.length);
+    const characterCode = symbols_codes[index]
+    password.push(characterCode)
+    currentlenghtofpassword += 1;
+    totalpassword_codes = totalpassword_codes.concat(symbols_codes)
+  }
+  if (numeric) {
+    var index = Math.floor(Math.random() * numeric_codes.length);
+    const characterCode = numeric_codes[index]
+    password.push(characterCode)
+    currentlenghtofpassword += 1;
+    totalpassword_codes = totalpassword_codes.concat(numeric_codes)
+  }
+
+  // const password = []
+  for (let i = 0; i < (characterAmount - currentlenghtofpassword); i++) {
+    const characterCode = totalpassword_codes[Math.floor(Math.random() * totalpassword_codes.length)]
+    password.push(characterCode)
+  }
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+  passwordText.value = password.join("");
 }
 
 
-function generate(){
-  return 'My fancy new password'
- }
 
-
-// function characterChoices() {
-
-// }
 
 
 
